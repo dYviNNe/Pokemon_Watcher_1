@@ -1,0 +1,12 @@
+services:
+ - type: worker
+   name: pokemon-watcher
+   env: python
+   plan: free
+   buildCommand: ""
+   startCommand: "python3 main.py"
+   envVars:
+     - key: TELEGRAM_TOKEN
+       sync: false
+     - key: CHAT_ID
+       sync: false
